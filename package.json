@@ -1,0 +1,27 @@
+{
+  "name": "automation-bot-whatsapp",
+  "version": "1.0.0",
+  "description": "automation tasks - bot in whatsapp",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "bot",
+    "whatsapp",
+    "automation",
+    "task"
+  ],
+  "author": "Roger Colquehuanca",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "puppeteer": "^5.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
