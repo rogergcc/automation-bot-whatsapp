@@ -4,8 +4,8 @@
   "description": "automation tasks - bot in whatsapp",
   "main": "app.js",
   "scripts": {
-    "test": "nodemon server.js",
-    "start": "node server.js"
+    "test": "nodemon app.js",
+    "start": "node app.js"
   },
   "keywords": [
     "bot",

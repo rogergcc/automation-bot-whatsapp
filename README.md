@@ -1,13 +1,12 @@
 # Automation with Whatsapp
-bot whatsapp nodejs pokemon. Send number and return pokemon.
+Nodejs project bot whatsapp nodejs pokemon. Send number and return pokemon.
 
 
-# Technologies used.
-Nodejs,   
+# Technologies used.   
 body-parser,
 dotenv,
-express,
 puppeteer
+nodemon
 
 # Getting Started
 1. Clone repo and install npm nodejs git.

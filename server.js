@@ -2,34 +2,9 @@
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
-
-const express = require("express");
 const puppeteer = require("puppeteer");
-
 const CONFIG = require("./app/config/config");
-// const morgan = require('morgan')
-// const createError = require('http-errors')
 const bodyParser = require("body-parser");
-
-//https://www.npmjs.com/package/image-to-ascii
-//other project
-
-// const App = express()
-// App.use(bodyParser.json())
-// // App.use(morgan('dev'))
-// App.use(express.json())
-// App.use(express.urlencoded({ extended: true }))
-
-// App.post('/webhooks/telegram', (req, res, next) => {
-//   console.log(req.body);
-
-//   res.send({ status: "ok" });
-
-// });
-
-const isNumeric = (num) =>
-  (typeof num === "number" || (typeof num === "string" && num.trim() !== "")) &&
-  !isNaN(num);
 
 async function scrape(url) {
   //   const browser = await puppeteer.launch({ headless: false });
@@ -51,8 +26,9 @@ async function scrape(url) {
 
   //   await page.waitForSelector("span [title='Teagretoyteelimino']");
 
-
-  const target = await page.$("span[title='Teagretoyteelimino']");
+  const contactName = "Teagretoyteelimino";
+  
+  const target = await page.$(`span[title='${contactName}']`);
   await target.click();
 
 //   const contactName = "Teagretoyteelimino";
@@ -72,7 +48,3 @@ async function scrape(url) {
 
 scrape("https://web.whatsapp.com");
 
-// App.listen(CONFIG.PORT, function (error) {
-//   if (error) return console.log(error);
-//   console.log(`Servidor corriendo en el Puerto: ${CONFIG.HOST}:${CONFIG.PORT}`);
-// });
